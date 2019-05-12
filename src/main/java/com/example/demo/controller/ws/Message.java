@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
-@NoArgsConstructor(access = AccessLevel.PRIVATE, onConstructor = @__(@JsonCreator))
+@NoArgsConstructor(access = AccessLevel.PRIVATE, onConstructor_ = {@JsonCreator})
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Message<T> {
 
@@ -38,7 +38,7 @@ public class Message<T> {
 
 	@Data
 	@AllArgsConstructor(access = AccessLevel.PRIVATE)
-	@NoArgsConstructor(access = AccessLevel.PRIVATE, onConstructor = @__(@JsonCreator))
+	@NoArgsConstructor(access = AccessLevel.PRIVATE, onConstructor_ = {@JsonCreator})
 	public static class Trade {
 		float price;
 		float amount;

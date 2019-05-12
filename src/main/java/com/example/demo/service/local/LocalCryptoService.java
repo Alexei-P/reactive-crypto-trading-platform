@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class LocalCryptoService implements CryptoService {
 
 	private final DirectProcessor<Message<?>> stream = DirectProcessor.create();

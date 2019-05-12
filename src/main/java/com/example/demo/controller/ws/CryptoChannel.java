@@ -18,7 +18,7 @@ import org.springframework.web.reactive.socket.WebSocketMessage;
 import org.springframework.web.reactive.socket.WebSocketSession;
 
 @Service
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class CryptoChannel implements WebSocketHandler {
 
 	final WebSocketMessageMapper          mapper;

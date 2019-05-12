@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @PreAuthorize("isAuthenticated()")
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class LocalWalletService implements WalletService {
 
 	private final DirectProcessor<Wallet> stream = DirectProcessor.create();

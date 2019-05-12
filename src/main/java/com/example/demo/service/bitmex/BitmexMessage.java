@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
-@NoArgsConstructor(onConstructor = @__(@JsonCreator))
+@NoArgsConstructor(onConstructor_ = {@JsonCreator})
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BitmexMessage<T> {
     String  table;
@@ -18,7 +18,7 @@ public class BitmexMessage<T> {
     List<T> data;
 
     @Data
-    @NoArgsConstructor(onConstructor = @__(@JsonCreator))
+    @NoArgsConstructor(onConstructor_ = {@JsonCreator})
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class InternalTrade {
         @NonNull
@@ -35,7 +35,7 @@ public class BitmexMessage<T> {
     }
 
     @Data
-    @NoArgsConstructor(onConstructor = @__(@JsonCreator))
+    @NoArgsConstructor(onConstructor_ = {@JsonCreator})
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class InternalPrice {
         Date  timestamp;
