@@ -28,7 +28,7 @@ public class BitmexCryptoService implements CryptoService {
 	private static void connect(FluxSink<Message<?>> sink) {
 		new ReactorNettyWebSocketClient()
 				.execute(
-						URI.create("wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,trade:XBTUSD"),
+						URI.create("wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,orderBook10:XBTUSD"),
 						new BitmexWebSocketHandler(sink)
 				)
 				.log("Connected TO Bitmex", Level.INFO, SignalType.ON_SUBSCRIBE)
